@@ -16,3 +16,27 @@ h2 {
 	margin-left: 6px;
 	margin-top: 7px;
 }
+
+.settings ul {
+    list-style: none;
+    padding: 0;
+}
+
+.settings li {
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.settings li.active {
+    background-color: #007AFF;
+}
+
+.selected-option {
+    color: #999;
+    font-size: 0.9em;
+}
+
+.settings li.active .selected-option {
+    color: #fff;
+}
