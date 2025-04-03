@@ -42,13 +42,16 @@ const Navbar = ({ playing, noty, setNoty, notifyText }) => {
 
     return (
         <div className="bar">
-            {<h5 className="heading">iPod <i className="fas fa-wifi"></i></h5>}
+            <h5 className="heading">iPod <i className="fas fa-wifi"></i></h5>
             {noty === true && <h5 className="notification">{notifyText}</h5>}
             {noty === false && <h3 className="time">{time}</h3>}
-            {<div className="right-container-nav">
-                {playing ? <h5 className="play-pause-nav"><i className="fas fa-play"></i></h5> : <h5 className="play-pause-nav"><i className="fas fa-pause"></i> </h5>}
+            <div className="right-container-nav">
+                {playing ? 
+                    <h5 className="play-pause-nav"><i className="fas fa-play"></i></h5> : 
+                    <h5 className="play-pause-nav"><i className="fas fa-pause"></i></h5>
+                }
                 <img className="battery" src={BatImg} alt="Battery" />
-            </div>}
+            </div>
         </div>
     )
 }

@@ -34,12 +34,15 @@ const Display = ({
     notifyText 
 }) => {
     return (
-        <div style={{ backgroundImage: `url(${wallpaperItems[wallpaper]})` }} className="display">
+        <div 
+            style={{ backgroundImage: `url(${wallpaperItems[wallpaper]})` }} 
+            className="display absolute top-[25px] left-[15px] overflow-hidden"
+        >
             <Navbar noty={noty} setNoty={setNoty} playing={playing} notifyText={notifyText} />
             {currentMenu === -2 && <LockScreen />}
             {currentMenu === -1 && <Menu songImgUrl={songImgUrl} menuItems={menuItems} active={active} />}
             {currentMenu === 1 && <Music musicItems={musicItems} active={active} />}
-            {currentMenu === 2 && <div className="blank-div"><h1 className="empty-text">Games</h1></div>}
+            {currentMenu === 2 && <div className="blank-div"><h1 className="empty-text">Photos</h1></div>}
             {currentMenu === 3 && <Settings active={active} />}
             {currentMenu === 4 && <Songs songItems={songItems} active={active} />}
             {currentMenu === 5 && <div className="blank-div"><h1 className="empty-text">Artists</h1></div>}

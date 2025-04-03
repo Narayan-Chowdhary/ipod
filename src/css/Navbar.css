@@ -1,10 +1,10 @@
 /* whole navigation bar */
 .bar{
-    margin-top: -1px;
+    /* margin-top: -1px; */
     display: flex;
-    width: 270px;
-    height: 20px;
-    min-height: 20px;
+    /* width: 270px; */
+    /* height: 20px; */
+    /* min-height: 20px; */
     background-color: #E3F2FD;
     border-bottom: 1px solid black;
 }

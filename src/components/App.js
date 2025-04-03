@@ -22,8 +22,8 @@ const getInitialState = () => {
     
      return {
         active: 0,
-        menuItems: ["Now Playing", "Music", "Games", "Settings"],
-        musicItems: ["All Songs", "Artist", "Albums"],
+        menuItems: ["Now Playing", "Music", "Photos", "Settings"],
+        musicItems: ["DDTU", "English", "Hindi", "Rajasthani", "Punjabi"],
         songItemsUrl: SONGS.map(song => song.url),
         songImgItemsUrl: SONGS.map(song => song.cover),
         wallpaperItems: WALLPAPERS,

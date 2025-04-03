@@ -3,6 +3,14 @@
     width: 270px;
     height: 200px;
     background-color: #E3F2FD;
+    overflow-y: auto;
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.settings::-webkit-scrollbar {
+    display: none;
 }
 
 /* list element */
@@ -15,6 +23,11 @@ h2 {
 	margin: -5px;
 	margin-left: 6px;
 	margin-top: 7px;
+	position: sticky;
+	top: 0;
+	background-color: #E3F2FD;
+	padding: 5px 0;
+	z-index: 1;
 }
 
 .settings ul {

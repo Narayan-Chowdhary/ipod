@@ -1,60 +1,99 @@
 /* Container for menu */
 .menu-container{
     display: flex;    
+    height: 100%;
+    overflow: hidden;  
 }
 
 /* Menu options */
 .menu{
     background-color: #E3F2FD;
-    height: 190px;
+    min-height: 190px;
     width: 135px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;  
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    padding-block: 2px;
+    
 }
 
 /* container for Leaf images in menu */
 .leaf{
     border-left: 1px solid black;
     background-color: #E3F2FD;
-    height: 190px;
+    min-height: 190px;
     width: 135px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
 }
 
 /* Heading of menu */
 h3{
     text-align: center;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 5px 0;
+    background-color: #E3F2FD;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 /* List for menu items */
 ul{
     width: 100%;
-    padding: 0px;
+    padding: 0;
+    margin: 0;
     list-style: none;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #E3F2FD;
+    overflow-y: auto;
+    height: calc(100% - 30px);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+ul::-webkit-scrollbar {
+    display: none;
 }
 
 /* list item */
 li{
-    padding: 10px 0px;
+    padding: 8px 10px;
+    margin: 0;
+    cursor: pointer;
+    min-height: 24px;
+    display: flex;
+    align-items: center;
+    background-color: #E3F2FD;
 }
 
 /* Active list item */
 .active{
-    padding-left: 5px;
-    position: relative;
     background-color: rgb(55, 150, 220);
     color: white;
+    position: relative;
+    margin: 0;
+    padding: 8px 10px;
 }
 
 /* Arrow sign after list item */
 .active::after{
     position: absolute;
     content: ">";
-    right: 2px;
+    right: 10px;
 }
 
 /* Leaf image */
 .leaf-img{
-    border: 2px solid black;
-    height: 188px;
+     height: 100%;
     width: 135px;
+    object-fit: cover;
 }

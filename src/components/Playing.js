@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import "../css/Playing.css"
 
 const Playing = ({ songItems, playing, songIndex, audio, songImgUrl }) => {
     const [currentTime, setCurrentTime] = useState(0);
@@ -41,19 +40,19 @@ const Playing = ({ songItems, playing, songIndex, audio, songImgUrl }) => {
     };
 
     return (
-        <div className="now-playing-container">
-            <div className="song-details">
-                <img src={songImgUrl} alt="songImg"></img>
+        <div className="w-[270px] h-[190px] bg-[#E3F2FD] flex flex-col justify-between box-border p-[10px]">
+            <div className="flex items-center justify-between box-border p-[10px]">
+                <img src={songImgUrl} alt="songImg" className="m-auto mt-[10px] w-[110px] h-[110px] rounded-[5px] object-cover"></img>
                 <div>
-                    <h6>{songItems[songIndex]}</h6>
-                    {playing && <h4 className="play-pause-nav">Playing</h4>}
-                    {!playing && <h4 className="play-pause-nav">Paused</h4>}
+                    <h6 className="m-[2px] ml-[5px] text-[18px]">{songItems[songIndex]}</h6>
+                    {playing && <h4 className="mt-[10px] text-[16px] text-[#666]">Playing</h4>}
+                    {!playing && <h4 className="mt-[10px] text-[16px] text-[#666]">Paused</h4>}
                 </div>
             </div>
-            <div className="status">
+            <div className="mt-[10px] flex items-center justify-center w-full gap-[5px]">
                 {formatTime(currentTime)}
-                <div id="progress">
-                    <div style={percentageComplete} id="progress-bar"></div>
+                <div className="w-[65%] h-[10px] mx-[5px] bg-gray-300">
+                    <div style={percentageComplete} className="h-[10px] bg-green-500"></div>
                 </div>
                 {formatTime(audio.duration)}
             </div>
